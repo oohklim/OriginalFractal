@@ -6,23 +6,7 @@ public void setup() {
 	translate(250, 250);
 	myFractal(250, 50);
 }
-public void draw() {
-	// background(0);
-	// translate(250, 250);
-	// myFractal(200, 5);
-}
 public void myFractal(float a, float b) {
-	//n = # of cusps;
-	// noFill();
-	// stroke(0, 0, 100);
-	// rect(x - size/2, y - size/2, size, size);
-	// fill(0, 0, 100);
-	// textAlign(CENTER);
-	// textSize(size/10);
-	// text("RECURSION", x, y + size/2.1);
-	// if (size > 10) {
-	//  	myFractal(x, y, size/1.3);
-	// }
 	float x, y, n, temp;
 	n = a/b;
 	temp = 0;
@@ -35,6 +19,6 @@ public void myFractal(float a, float b) {
 	if (n > 0) {
 		temp += 1/(2*n);
 		rotate(temp);
-	 	myFractal(b*n - 1, b);
+	 	myFractal(a - 1, b);
 	}
 }
